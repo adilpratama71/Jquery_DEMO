@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0px 0px;
+        padding: 0px 0px;
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- LANDING PAGE -->
+    <div id="landingPage" class="container w-100">
+      <form id="formSignIn" class="w-50 p-3">
+        <h3>Sign In</h3>
+        <div class="form-group">
+          <input id="signInEmail" type="text" placeholder="email" autofocus />
+        </div>
+        <div class="form-group">
+          <input id="signInPassword" type="password" placeholder="password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+      <p id="signInError" style="color: red;"></p>
+    </div>
+    <!-- END LANDING PAGE -->
+
+    <!-- DASHBOARD PAGE -->
+    <div id="dashboardPage">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+          </li>
+        </ul>
+      </nav>
+      <h1>My Digimon</h1>
+      <ol style="margin-bottom: 8px;" id="digimonList"></ol>
+      <form id="formDigimon" onsubmit="submitDigimon(event)">
+        <input type="text" id="digimonName" placeholder="name" autofocus />
+        <input type="text" id="digimonLevel" placeholder="level" />
+        <input type="text" id="digimonImgUrl" placeholder="imgUrl" />
+        <button type="submit">Submit Digimon</button>
+      </form>
+    </div>
+    <!-- END DASHBOARD PAGE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
